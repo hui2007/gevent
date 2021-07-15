@@ -24,16 +24,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Setup Python
-  uses: actions/setup-python@v2.2.2
+          uses: actions/setup-python@v2.2.2
       - uses: actions/checkout@v2
       - name: Run on architecture
   # You may pin to the exact commit or the version.
   # uses: uraimo/run-on-arch-action@e24ce273595f4dfa6572e9a406d87b249a7bb47c
-  uses: uraimo/run-on-arch-action@v2.0.10
-  with:
+          uses: uraimo/run-on-arch-action@v2.0.10
+            with:
     # CPU architecture: armv6, armv7, aarch64, s390x, ppc64le.
-    arch: armv7
+              arch: armv7
     # Linux distribution name: ubuntu16.04, ubuntu18.04, ubuntu20.04, bullseye, buster, stretch, jessie, fedora_latest, alpine_latest, archarm_latest.
     # Shell commands to execute in the container.
-    run: python3 setup.py install
+              run: python3 setup.py install
     # The shell to run commands with in the container. Default: /bin/sh on alpine (because Alpine uses BusyBox), /bin/bash for other distros
